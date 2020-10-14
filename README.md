@@ -71,7 +71,7 @@ $district->province; // Retrives province where that district belongs to.
 
 // District Municipality Relation
 $district = LaraNepal::districts()->first();
-$district->municipalities();
+$district->municipalities;
 
 // Muncipality district relation
 $municipality = LaraNepal::municipalities()->first();
