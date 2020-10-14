@@ -1,0 +1,57 @@
+{
+    "name": "pratiksh/lara-nepal",
+    "description": "Your Package Description here",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+		"laravel-nepal",
+		"nepal-states",
+		"netal-districts"
+	],
+    "authors": [
+        {
+            "name": "Pratik Shrestha",
+            "email": "pratikdai404@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable":true,
+    "require": {},
+    "require-dev": {
+        "symfony/thanks": "^1.0",
+        "phpunit/phpunit": "^7.4@dev",
+        "mockery/mockery": "^1.0@dev",
+        "orchestra/testbench": "^3.8@dev",
+        "orchestra/database": "^3.8@dev",
+        "illuminate/support": "^5.8@dev",
+        "fzaninotto/faker": "^1.9@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pratiksh\\LaraNepal\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pratiksh\\LaraNepal\\Tests\\":"tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pratiksh\\LaraNepal\\LaraNepalServiceProvider"
+            ],
+            "aliases": {
+                "Pratiksh": "Pratiksh\\LaraNepal\\LaraNepalFacade"
+            }
+        }
+    }
+}
