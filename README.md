@@ -1,5 +1,6 @@
 ![Laravel Nepal](https://github.com/pratiksh404/laranepal/blob/main/img/laranepal.png)
 
+[![Stars](https://img.shields.io/github/stars/pratiksh404/laranepal)](https://github.com/pratiksh404/laranepal/stargazers)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Total Downloads](https://img.shields.io/packagist/dt/pratiksh/lara-nepal.svg?style=flat-square)](https://packagist.org/packages/pratiksh/lara-nepal)
 
