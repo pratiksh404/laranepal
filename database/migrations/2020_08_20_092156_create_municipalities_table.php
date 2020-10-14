@@ -16,8 +16,8 @@ class CreateMunicipalitiesTable extends Migration
         Schema::create('municipalities', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('district_id');
-            $table->string('municipality_name')->unique();
-            $table->boolean('is_available')->default(false);
+            $table->string('name')->unique();
+            $table->boolean('type')->default(false);
             $table->foreign('district_id')->references('id')->on('districts')->onDelete('cascade');
             $table->timestamps();
         });

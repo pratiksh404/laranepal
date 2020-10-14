@@ -19,6 +19,7 @@ class CreateProvincesTable extends Migration
             $table->string('capital')->nullable();
             $table->bigInteger('no_of_districts')->nullable();
             $table->bigInteger('area')->nullable()->default(12);
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

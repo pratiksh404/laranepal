@@ -11,6 +11,6 @@ class MunicipalitySeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Model\Municipality::class, 150)->create();
+        //
     }
 }
