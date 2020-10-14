@@ -3,7 +3,6 @@
 namespace Pratiksh\LaraNepal;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Route;
 
 class LaraNepalServiceProvider extends ServiceProvider
 {
@@ -16,38 +15,13 @@ class LaraNepalServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__ . '/../config/LaraNepal.php', 'lara-nepal');
 
-        $this->publishConfig();
+        $this->loadResources();
 
-        // $this->loadViewsFrom(__DIR__.'/resources/views', 'lara-nepal');
-        // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
-        // $this->registerRoutes();
+        if ($this->app->runningInConsole()) {
+            $this->publishResources();
+        }
     }
 
-    /**
-     * Register the package routes.
-     *
-     * @return void
-     */
-    private function registerRoutes()
-    {
-        Route::group($this->routeConfiguration(), function () {
-            $this->loadRoutesFrom(__DIR__ . '/Http/routes.php');
-        });
-    }
-
-    /**
-    * Get route group configuration array.
-    *
-    * @return array
-    */
-    private function routeConfiguration()
-    {
-        return [
-            'namespace'  => "Pratiksh\LaraNepal\Http\Controllers",
-            'middleware' => 'api',
-            'prefix'     => 'api'
-        ];
-    }
 
     /**
      * Register any application services.
@@ -56,23 +30,51 @@ class LaraNepalServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->commands([
+            Console\Commands\ImportNepalCommand::class
+        ]);
         // Register facade
         $this->app->singleton('lara-nepal', function () {
             return new LaraNepal;
         });
     }
 
+
+    protected function loadResources()
+    {
+        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+    }
+
+    protected function publishResources()
+    {
+        $this->publishConfig();
+        $this->publishSeeds();
+    }
+
+
     /**
      * Publish Config
      *
      * @return void
      */
-    public function publishConfig()
+    protected function publishConfig()
     {
-        if ($this->app->runningInConsole()) {
-            $this->publishes([
-                __DIR__ . '/../config/LaraNepal.php' => config_path('LaraNepal.php'),
-            ], 'config');
-        }
+        $this->publishes([
+            __DIR__ . '/../config/LaraNepal.php' => config_path('LaraNepal.php'),
+        ], 'config');
+    }
+
+    /**
+     *
+     *Publish Seed
+     *
+     *@return void
+     *
+     */
+    protected function publishSeeds()
+    {
+        $this->publishes([
+            __DIR__ . '/../database/seeds' =>  database_path('seeds')
+        ], 'laranepal-seed');
     }
 }

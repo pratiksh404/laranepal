@@ -50,7 +50,7 @@
                 "Pratiksh\\LaraNepal\\LaraNepalServiceProvider"
             ],
             "aliases": {
-                "Pratiksh": "Pratiksh\\LaraNepal\\LaraNepalFacade"
+                "Pratiksh": "Pratiksh\\LaraNepal\\Facade\\LaraNepal"
             }
         }
     }

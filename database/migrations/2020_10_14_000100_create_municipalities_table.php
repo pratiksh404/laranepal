@@ -14,11 +14,11 @@ class CreateMunicipalitiesTable extends Migration
     public function up()
     {
         Schema::create('municipalities', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('district_id');
+            $table->engine = 'InnoDB';
+            $table->string('district_name')->index();
             $table->string('name')->unique();
-            $table->boolean('type')->default(false);
-            $table->foreign('district_id')->references('id')->on('districts')->onDelete('cascade');
+            $table->string('link');
+            $table->foreign('district_name')->references('name')->on('districts')->onDelete('cascade');
             $table->timestamps();
         });
     }

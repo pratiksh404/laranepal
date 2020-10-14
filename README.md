@@ -1,9 +1,9 @@
-# lara-nepal
+![Laravel Nepal](https://github.com/pratiksh404/laranepal/blob/master/img/laranepal.png)
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Travis](https://img.shields.io/travis/pratiksh/lara-nepal.svg?style=flat-square)]()
 [![Total Downloads](https://img.shields.io/packagist/dt/pratiksh/lara-nepal.svg?style=flat-square)](https://packagist.org/packages/pratiksh/lara-nepal)
 
+# LaraNepal
 
 ## Install
 
@@ -11,30 +11,80 @@
 composer require pratiksh/lara-nepal
 ```
 
+then publish the package seeds
+
+```sh
+php artisan import:nepal
+```
+
+then call them in DatabaseSeeder.php
+
+```sh
+   class DatabaseSeeder extends Seeder
+{
+    /**
+     * Seed the application's database.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $this->call(ProvinceSeeder::class);
+        $this->call(DistrictSeeder::class);
+        $this->call(MunicipalitySeeder::class);
+    }
+}
+```
+
+that's it you are good to go
 
 ## Usage
 
-Write a few lines about the usage of this package.
+Package uses facade `LaraNepal` to retrive
 
+- Provinces
+- Districts
+- Municipalities
 
-## Testing
+```sh
+// use Pratiksh\LaraNepal\Facade\LaraNepal;
 
-Run the tests with:
-
-```bash
-vendor/bin/phpunit
+$provinces = LaraNepal::provinces();
+$districts = LaraNepal::districts();
+$municipalities = LaraNepal::municipalities();
 ```
 
+## Relations
+
+Package also provides relation among provinces, districts and municipalities.
+
+```sh
+// use Pratiksh\LaraNepal\Facade\LaraNepal;
+
+// Province District Relation
+$province = LaraNepal::provinces()->first();
+$provinces->districts; // Retrives districts of that particular province
+
+// District Province Relation
+$district = LaraNepal::districts()->first();
+$district->province; // Retrives province where that district belongs to.
+
+// District Municipality Relation
+$district = LaraNepal::districts()->first();
+$district->municipalities();
+
+// Muncipality district relation
+$municipality = LaraNepal::municipalities()->first();
+$municipality->district; // Retrive district where that municipality belongs to
+```
 
 ## Contributing
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
-
 ## Security
 
 If you discover any security-related issues, please email pratikdai404@gmail.com instead of using the issue tracker.
-
 
 ## License
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace Pratiksh\LaraNepal;
+namespace Pratiksh\LaraNepal\Facade;
 
 use Illuminate\Support\Facades\Facade;
 
-class LaraNepalFacade extends Facade
+class LaraNepal extends Facade
 {
     /**
      * Get the registered name of the component.

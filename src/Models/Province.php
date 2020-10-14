@@ -2,8 +2,8 @@
 
 namespace Pratiksh\LaraNepal\Models;
 
-use App\Model\District;
 use Illuminate\Database\Eloquent\Model;
+use Pratiksh\LaraNepal\Models\District;
 
 class Province extends Model
 {

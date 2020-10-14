@@ -14,9 +14,9 @@ class CreateDistrictsTable extends Migration
     public function up()
     {
         Schema::create('districts', function (Blueprint $table) {
-            $table->id();
+            $table->engine = 'InnoDB';
             $table->unsignedBigInteger('province_id');
-            $table->string('name')->unique();
+            $table->string('name')->index();
             $table->string('headquater');
             $table->bigInteger('area')->nullable()->default(12);
             $table->foreign('province_id')->references('id')->on('provinces');

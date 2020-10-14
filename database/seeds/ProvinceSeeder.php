@@ -1,8 +1,8 @@
 <?php
 
 
-use App\Model\Province;
 use Illuminate\Database\Seeder;
+use Pratiksh\LaraNepal\Models\Province;
 
 class ProvinceSeeder extends Seeder
 {
