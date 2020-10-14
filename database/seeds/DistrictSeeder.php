@@ -230,5 +230,278 @@ class DistrictSeeder extends Seeder
             ],
         );
         $districts = [];
+
+
+        $province_4 =  array(
+            [
+                'province_id' => 4,
+                'name' => 'Baglung',
+                'headquater' => 'Baglung',
+                'area' => 1784
+            ],
+            [
+                'province_id' => 4,
+                'name' => 'Gorkha',
+                'headquater' => 'Gorkha',
+                'area' => 3610
+            ],
+            [
+                'province_id' => 4,
+                'name' => 'Kaski',
+                'headquater' => 'Pokhara',
+                'area' => 2017
+            ],
+            [
+                'province_id' => 4,
+                'name' => 'Lamjung',
+                'headquater' => 'Besisahar',
+                'area' => 1692
+            ],
+            [
+                'province_id' => 4,
+                'name' => 'Manang',
+                'headquater' => 'Chame',
+                'area' => 2246
+            ],
+            [
+                'province_id' => 4,
+                'name' => 'Mustang',
+                'headquater' => 'Jomsom',
+                'area' => 3573
+            ],
+            [
+                'province_id' => 4,
+                'name' => 'Myagdi',
+                'headquater' => 'Beni',
+                'area' => 2297
+            ],
+            [
+                'province_id' => 4,
+                'name' => 'Nawalpur',
+                'headquater' => 'Kawasoti',
+                'area' => 1043
+            ],
+            [
+                'province_id' => 4,
+                'name' => 'Parbat',
+                'headquater' => 'Kusma',
+                'area' => 494
+            ],
+            [
+                'province_id' => 4,
+                'name' => 'Syangja',
+                'headquater' => 'Putalibazar',
+                'area' => 1164
+            ],
+            [
+                'province_id' => 4,
+                'name' => 'Tanahu',
+                'headquater' => 'Damauli',
+                'area' => 1546
+            ]           
+        );
+        $districts = [];
+
+        $province_5 =  array(
+        [
+            'province_id' => 5,
+            'name' => 'Kapilvastu',
+            'headquater' => 'Taulihawa',
+            'area' => 1738
+        ],
+        [
+            'province_id' => 5,
+            'name' => 'Parasi',
+            'headquater' => 'Ramgram',
+            'area' => 635
+        ],  
+        [
+            'province_id' => 5,
+            'name' => 'Rupandehi',
+            'headquater' => 'Siddarthanagar',
+            'area' => 1360
+        ],  
+        [
+            'province_id' => 5,
+            'name' => 'Argakhachi',
+            'headquater' => 'Sandhikharka',
+            'area' => 1193
+        ], 
+        [
+            'province_id' => 5,
+            'name' => 'Gulmi',
+            'headquater' => 'Tanghas',
+            'area' => 1149
+        ],
+        [
+            'province_id' => 5,
+            'name' => 'Palpa',
+            'headquater' => 'Tansen',
+            'area' => 1373
+        ],     
+        [
+            'province_id' => 5,
+            'name' => 'Dang Deukhuri',
+            'headquater' => 'Ghorahi',
+            'area' => 2955
+        ],  
+        [
+            'province_id' => 5,
+            'name' => 'Pyuthan',
+            'headquater' => 'Pyuthan',
+            'area' => 1309
+        ], 
+        [
+            'province_id' => 5,
+            'name' => 'Rolpa',
+            'headquater' => 'Liwang',
+            'area' => 1879
+        ],
+        [
+            'province_id' => 5,
+            'name' => 'Eastern Rukum',
+            'headquater' => 'Rumukot',
+            'area' => 1161
+        ],
+        [
+            'province_id' => 5,
+            'name' => 'Banke',
+            'headquater' => 'Nepalgunj',
+            'area' => 2337
+        ],
+        [
+            'province_id' => 5,
+            'name' => 'Bardiya',
+            'headquater' => 'Gulariya',
+            'area' => 2337
+        ]        
+    );
+    $districts = [];
+
+    $province_6 =  array(
+        [
+            'province_id' => 6,
+            'name' => 'Western Rukum',
+            'headquater' => 'Musikot',
+            'area' => 1213
+        ],    
+        [
+            'province_id' => 6,
+            'name' => 'Salyan',
+            'headquater' => 'Salyan',
+            'area' => 1462
+        ],    
+        [
+            'province_id' => 6,
+            'name' => 'Dolpa',
+            'headquater' => 'Dunai',
+            'area' => 7889
+        ],    
+        [
+            'province_id' => 6,
+            'name' => 'Humla',
+            'headquater' => 'Simikot',
+            'area' => 5655
+        ],    
+        [
+            'province_id' => 6,
+            'name' => 'Jumla',
+            'headquater' => 'Chandannath',
+            'area' => 2531
+        ],    
+        [
+            'province_id' => 6,
+            'name' => 'Kalikot',
+            'headquater' => 'Manma',
+            'area' => 1741
+        ],    
+        [
+            'province_id' => 6,
+            'name' => 'Mugu',
+            'headquater' => 'Gamgadhi',
+            'area' => 3535
+        ],    
+        [
+            'province_id' => 6,
+            'name' => 'Surkhet',
+            'headquater' => 'Birendranagar',
+            'area' => 2461 
+        ],    
+        [
+            'province_id' => 6,
+            'name' => 'Dailekh',
+            'headquater' => 'Narayan',
+            'area' => 1502
+        ],    
+        [
+            'province_id' => 6,
+            'name' => 'Jajarkot',
+            'headquater' => 'Khalanga',
+            'area' => 2230
+        ]    
+    );
+    $districts = [];
+
+
+    $province_7 =  array(
+        [
+            'province_id' => 7,
+            'name' => 'Kailali',
+            'headquater' => 'Dhangadi',
+            'area' => 3235
+        ], 
+        [
+            'province_id' => 7,
+            'name' => 'Achham',
+            'headquater' => 'Mangalsen',
+            'area' => 1680
+        ], 
+        [
+            'province_id' => 7,
+            'name' => 'Doti',
+            'headquater' => 'Dipayal Silgadhi',
+            'area' => 2025
+        ], 
+        [
+            'province_id' => 7,
+            'name' => 'Bajhang',
+            'headquater' => 'Jayaprithvi',
+            'area' => 3422
+        ], 
+        [
+            'province_id' => 7,
+            'name' => 'Bajura',
+            'headquater' => 'Martadi',
+            'area' => 2188
+        ], 
+        [
+            'province_id' => 7,
+            'name' => 'Kanchanpur',
+            'headquater' => 'Bhimdatta',
+            'area' => 1610
+        ], 
+        [
+            'province_id' => 7,
+            'name' => 'Dadeldhura',
+            'headquater' => 'Amargadhi',
+            'area' => 1538
+        ], 
+        [
+            'province_id' => 7,
+            'name' => 'Baitadi',
+            'headquater' => 'Dasharathchand',
+            'area' => 1519
+        ], 
+        [
+            'province_id' => 7,
+            'name' => 'Darchula',
+            'headquater' => 'Darchula',
+            'area' => 2322
+        ]   
+        );
+    $districts = [];
+
+
+        
     }
 }
