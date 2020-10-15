@@ -9,7 +9,7 @@
 ## Install
 
 ```bash
-composer require pratiksh/lara-nepal
+composer require pratiksh/laranepal
 ```
 
 then publish the package seeds
