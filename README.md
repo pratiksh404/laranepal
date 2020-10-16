@@ -39,6 +39,8 @@ then call them in DatabaseSeeder.php
 
 that's it you are good to go
 
+`Note` if seeder not found run `composer dump-autoload`
+
 ## Usage
 
 Package uses facade `LaraNepal` to retrive
