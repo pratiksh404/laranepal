@@ -18,26 +18,13 @@ then publish the package seeds
 php artisan import:nepal
 ```
 
-then call them in DatabaseSeeder.php
+then migrate the tables
 
 ```sh
-   class DatabaseSeeder extends Seeder
-{
-    /**
-     * Seed the application's database.
-     *
-     * @return void
-     */
-    public function run()
-    {
-        $this->call(ProvinceSeeder::class);
-        $this->call(DistrictSeeder::class);
-        $this->call(MunicipalitySeeder::class);
-    }
-}
+php artisan migrate
 ```
 
-that's it you are good to go
+that's it, you are good to go.
 
 `Note` if seeder not found run `composer dump-autoload`
 

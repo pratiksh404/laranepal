@@ -24,9 +24,11 @@ class CreateMunicipalitiesTable extends Migration
         });
 
         // Seeder Artisan Call
-        Artisan::call('db:seed', [
-            '--class' => MunicipalitySeeder::class
-        ]);
+        if (config('laranepal.seeding_while_migration', true)) {
+            Artisan::call('db:seed', [
+                '--class' => MunicipalitySeeder::class
+            ]);
+        }
     }
 
     /**

@@ -25,9 +25,11 @@ class CreateDistrictsTable extends Migration
         });
 
         // Seeder Artisan Call
-        Artisan::call('db:seed', [
-            '--class' => DistrictSeeder::class
-        ]);
+        if (config('laranepal.seeding_while_migration', true)) {
+            Artisan::call('db:seed', [
+                '--class' => DistrictSeeder::class
+            ]);
+        }
     }
 
     /**
