@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Pratiksh\LaraNepal\Models\District;
 
 class DistrictSeeder extends Seeder
 {
@@ -515,8 +514,6 @@ class DistrictSeeder extends Seeder
             $province_7,
         );
 
-        foreach ($districts as $district) {
-            District::create($district);
-        }
+        DB::table('districts')->insert($districts);
     }
 }

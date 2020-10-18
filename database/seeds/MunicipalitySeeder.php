@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Pratiksh\LaraNepal\Models\Municipality;
+use Illuminate\Support\Facades\DB;
 
 class MunicipalitySeeder extends Seeder
 {
@@ -1425,8 +1425,6 @@ class MunicipalitySeeder extends Seeder
             ]
         ];
 
-        foreach ($municipalities as $municipality) {
-            Municipality::create($municipality);
-        }
+        DB::table('municipalities')->insert($municipalities);
     }
 }

@@ -1,8 +1,6 @@
 <?php
 
-
 use Illuminate\Database\Seeder;
-use Pratiksh\LaraNepal\Models\Province;
 
 class ProvinceSeeder extends Seeder
 {
@@ -65,8 +63,6 @@ class ProvinceSeeder extends Seeder
             ],
         ];
 
-        foreach ($provinces as $province) {
-            Province::create($province);
-        }
+        DB::table('provinces')->insert($provinces);
     }
 }
