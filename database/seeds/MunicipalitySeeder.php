@@ -1365,7 +1365,7 @@ class MunicipalitySeeder extends Seeder
             ],
             [
                 "name" =>  "Myanglung",
-                "district_name" =>  "Terathum",
+                "district_name" =>  "Terhathum",
                 "link" =>  "https => //en.wikipedia.org/wiki/Terhathum_district_name"
             ],
             [
@@ -1390,7 +1390,7 @@ class MunicipalitySeeder extends Seeder
             ],
             [
                 "name" =>  "Laligurans",
-                "district_name" =>  "Terathum",
+                "district_name" =>  "Terhathum",
                 "link" =>  "https => //en.wikipedia.org/wiki/Terhathum_district_name"
             ],
             [
