@@ -130,19 +130,19 @@ class DistrictSeeder extends Seeder
                 'area' => 1180
             ],
             [
-                'province_id' => 1,
+                'province_id' => 2,
                 'name' => 'Siraha',
                 'headquater' => 'Siraha',
                 'area' => 1188
             ],
             [
-                'province_id' => 1,
+                'province_id' => 2,
                 'name' => 'Mahottari',
                 'headquater' => 'Jaleshwar',
                 'area' => 1002
             ],
             [
-                'province_id' => 1,
+                'province_id' => 2,
                 'name' => 'Saptari',
                 'headquater' => 'Rajbiraj',
                 'area' => 1363
