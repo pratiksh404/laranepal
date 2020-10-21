@@ -95,12 +95,6 @@ class DistrictSeeder extends Seeder
                 'name' => 'Udayapur',
                 'headquater' => 'Gaighat',
                 'area' => 2063
-            ],
-            [
-                'province_id' => 1,
-                'name' => 'Terathum',
-                'headquater' => 'Myanglung',
-                'area' => 679
             ]
         );
 
