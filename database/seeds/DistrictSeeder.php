@@ -334,7 +334,7 @@ class DistrictSeeder extends Seeder
             [
                 'province_id' => 5,
                 'name' => 'Gulmi',
-                'headquater' => 'Tanghas',
+                'headquater' => 'Tamghas',
                 'area' => 1149
             ],
             [
