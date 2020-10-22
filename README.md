@@ -18,6 +18,10 @@ then publish the package seeds
 php artisan import:nepal
 ```
 
+```sh
+composer dump-autoload
+```
+
 then migrate the tables
 
 ```sh
