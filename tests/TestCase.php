@@ -2,18 +2,18 @@
 
 namespace Pratiksh\LaraNepal\Tests;
 
-use Pratiksh\LaraNepal\LaraNepalServiceProvider;
 use Orchestra\Testbench\TestCase as BaseTestCase;
+use Pratiksh\LaraNepal\LaraNepalServiceProvider;
 
 class TestCase extends BaseTestCase
 {
-    public function setup() : void
+    public function setup(): void
     {
         parent::setUp();
         $this->withoutExceptionHandling();
         $this->artisan('migrate', ['--database' => 'testing']);
 
-        $this->loadMigrationsFrom(__DIR__ . '/../src/database/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/../src/database/migrations');
         $this->loadLaravelMigrations(['--database' => 'testing']);
 
         $this->withFactories(__DIR__.'/../src/database/factories');

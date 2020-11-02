@@ -3,8 +3,6 @@
 namespace Pratiksh\LaraNepal\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Pratiksh\LaraNepal\Models\Province;
-use Pratiksh\LaraNepal\Models\Municipality;
 
 class District extends Model
 {
@@ -12,7 +10,7 @@ class District extends Model
 
     public $incrementing = false;
     public $keyType = 'string';
-    protected $primaryKey = "name";
+    protected $primaryKey = 'name';
 
     // District Belongs To Relationship
     public function province()

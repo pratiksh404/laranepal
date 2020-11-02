@@ -2,9 +2,7 @@
 
 namespace Pratiksh\LaraNepal\Models;
 
-
 use Illuminate\Database\Eloquent\Model;
-use Pratiksh\LaraNepal\Models\District;
 
 class Municipality extends Model
 {
