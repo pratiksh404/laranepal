@@ -1,9 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Support\Facades\Artisan;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Schema;
 
 class CreateProvincesTable extends Migration
 {
@@ -27,7 +27,7 @@ class CreateProvincesTable extends Migration
         // Seeder Artisan Call
         if (config('laranepal.seeding_while_migration', true)) {
             Artisan::call('db:seed', [
-                '--class' => ProvinceSeeder::class
+                '--class' => ProvinceSeeder::class,
             ]);
         }
     }

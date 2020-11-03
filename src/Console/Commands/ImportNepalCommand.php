@@ -38,7 +38,7 @@ class ImportNepalCommand extends Command
     public function handle()
     {
         $this->call('vendor:publish', [
-            '--tag' => ['laranepal-seed']
+            '--tag' => ['laranepal-seed'],
         ]);
         $this->info('A star to the repo would be great. Thank You ! Jay Nepal');
     }

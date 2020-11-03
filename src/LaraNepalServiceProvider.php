@@ -13,7 +13,7 @@ class LaraNepalServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/LaraNepal.php', 'lara-nepal');
+        $this->mergeConfigFrom(__DIR__.'/../config/LaraNepal.php', 'lara-nepal');
 
         $this->loadResources();
 
@@ -21,7 +21,6 @@ class LaraNepalServiceProvider extends ServiceProvider
             $this->publishResources();
         }
     }
-
 
     /**
      * Register any application services.
@@ -31,7 +30,7 @@ class LaraNepalServiceProvider extends ServiceProvider
     public function register()
     {
         $this->commands([
-            Console\Commands\ImportNepalCommand::class
+            Console\Commands\ImportNepalCommand::class,
         ]);
         // Register facade
         $this->app->singleton('lara-nepal', function () {
@@ -39,10 +38,9 @@ class LaraNepalServiceProvider extends ServiceProvider
         });
     }
 
-
     protected function loadResources()
     {
-        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
     }
 
     protected function publishResources()
@@ -51,30 +49,27 @@ class LaraNepalServiceProvider extends ServiceProvider
         $this->publishSeeds();
     }
 
-
     /**
-     * Publish Config
+     * Publish Config.
      *
      * @return void
      */
     protected function publishConfig()
     {
         $this->publishes([
-            __DIR__ . '/../config/LaraNepal.php' => config_path('LaraNepal.php'),
+            __DIR__.'/../config/LaraNepal.php' => config_path('LaraNepal.php'),
         ], 'config');
     }
 
     /**
-     *
-     *Publish Seed
+     *Publish Seed.
      *
      *@return void
-     *
      */
     protected function publishSeeds()
     {
         $this->publishes([
-            __DIR__ . '/../database/seeds' =>  database_path('seeds')
+            __DIR__.'/../database/seeds' =>  database_path('seeds'),
         ], 'laranepal-seed');
     }
 }

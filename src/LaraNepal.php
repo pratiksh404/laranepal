@@ -4,8 +4,8 @@ namespace Pratiksh\LaraNepal;
 
 use Illuminate\Support\Facades\Cache;
 use Pratiksh\LaraNepal\Models\District;
-use Pratiksh\LaraNepal\Models\Province;
 use Pratiksh\LaraNepal\Models\Municipality;
+use Pratiksh\LaraNepal\Models\Province;
 
 class LaraNepal
 {
@@ -15,6 +15,7 @@ class LaraNepal
         $provinces = config('laranepal.caching', true)
             ? (Cache::has('provinces') ? Cache::get('provinces') : Province::with('districts')->get())
             : Province::with('districts')->get();
+
         return $provinces;
     }
 
@@ -24,6 +25,7 @@ class LaraNepal
         $districts = config('laranepal.caching', true)
             ? (Cache::has('districts') ? Cache::get('districts') : District::with('municipalities')->get())
             : District::with('municipalities')->get();
+
         return $districts;
     }
 
@@ -33,6 +35,7 @@ class LaraNepal
         $municipalities = config('laranepal.caching', true)
             ? (Cache::has('municipalities') ? Cache::get('municipalities') : Municipality::all())
             : Municipality::all();
+
         return $municipalities;
     }
 }
