@@ -12,7 +12,7 @@ class LaraNepal
     // Retrive Nepal's Provinces
     public function provinces()
     {
-        $provinces = config('laranepal.caching', true)
+        $provinces = config('laraNepal.caching', true)
             ? (Cache::has('provinces') ? Cache::get('provinces') : Province::with('districts')->get())
             : Province::with('districts')->get();
 
@@ -22,7 +22,7 @@ class LaraNepal
     // Retrives Nepal's Districts
     public function districts()
     {
-        $districts = config('laranepal.caching', true)
+        $districts = config('laraNepal.caching', true)
             ? (Cache::has('districts') ? Cache::get('districts') : District::with('municipalities')->get())
             : District::with('municipalities')->get();
 
@@ -32,7 +32,7 @@ class LaraNepal
     // Retrives Nepal's Municipalities
     public function municipalities()
     {
-        $municipalities = config('laranepal.caching', true)
+        $municipalities = config('laraNepal.caching', true)
             ? (Cache::has('municipalities') ? Cache::get('municipalities') : Municipality::all())
             : Municipality::all();
 

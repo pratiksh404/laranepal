@@ -1,5 +1,6 @@
 <?php
 
+use Database\Seeders\MunicipalitySeeder;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Artisan;
@@ -24,7 +25,7 @@ class CreateMunicipalitiesTable extends Migration
         });
 
         // Seeder Artisan Call
-        if (config('laranepal.seeding_while_migration', true)) {
+        if (config('laraNepal.seeding_while_migration', true)) {
             Artisan::call('db:seed', [
                 '--class' => MunicipalitySeeder::class,
             ]);
