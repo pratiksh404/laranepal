@@ -69,7 +69,7 @@ class LaraNepalServiceProvider extends ServiceProvider
     protected function publishSeeds()
     {
         $this->publishes([
-            __DIR__.'/../database/seeds' =>  database_path('seeds'),
+            __DIR__.'/../database/seeders' =>  database_path('seeders'),
         ], 'laranepal-seed');
     }
 }
